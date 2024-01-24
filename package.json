@@ -1,0 +1,21 @@
+{
+  "name": "ecommercewebsite",
+  "version": "1.0.0",
+  "description": "e-commerce website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev" : "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server"
+  },
+  "author": "Walfred Cutaran",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
