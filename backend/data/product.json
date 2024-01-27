@@ -1,0 +1,580 @@
+[
+{
+    "name": "Organic Cotton T-Shirt",
+    "price": 24.99,
+    "description": "A comfortable and stylish tee made from 100% organic cotton.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "https://example.com/images/organic-cotton-tee.jpg",
+        "url": "https://example.com/images/organic-cotton-tee.jpg" 
+    }],
+    "category": "Clothing",
+    "seller": "Eco Fashion",
+    "stock": 15,
+    "numOfReviews": 87,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:25:00"
+    },
+
+    {
+    "name": "Wireless Noise-Canceling Headphones",
+    "price": 129.99,
+    "description": "Immerse yourself in music with these wireless headphones featuring advanced noise-canceling technology.",
+    "ratings": 4.9,
+    "images": [{
+        "public_id": "wireless-headphones-1",
+        "url": "https://example.com/images/wireless-headphones-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "SoundScape",
+    "stock": 10,
+    "numOfReviews": 120,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:15:00"
+    },
+    {
+    "name": "Smart Home Security Camera",
+    "price": 79.99,
+    "description": "Keep an eye on your home with this smart security camera that offers real-time monitoring and alerts.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "security-camera-1",
+        "url": "https://example.com/images/security-camera-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "SecureTech",
+    "stock": 15,
+    "numOfReviews": 85,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:20:00"
+    },
+    {
+    "name": "Ultra HD Smart TV",
+    "price": 599.99,
+    "description": "Upgrade your entertainment experience with this Ultra HD smart TV featuring streaming capabilities and a sleek design.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "smart-tv-1",
+        "url": "https://example.com/images/smart-tv-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "TechVision",
+    "stock": 8,
+    "numOfReviews": 95,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:25:00"
+    },
+    {
+    "name": "Compact Bluetooth Speaker",
+    "price": 34.99,
+    "description": "Enjoy your favorite tunes on the go with this compact Bluetooth speaker with impressive sound quality.",
+    "ratings": 4.5,
+    "images": [{
+        "public_id": "bluetooth-speaker-1",
+        "url": "https://example.com/images/bluetooth-speaker-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "SoundWave",
+    "stock": 20,
+    "numOfReviews": 55,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:30:00"
+    },
+    {
+    "name": "High-Performance Gaming Laptop",
+    "price": 1499.99,
+    "description": "Immerse yourself in gaming with this high-performance laptop featuring advanced graphics and fast processing speed.",
+    "ratings": 4.9,
+    "images": [{
+        "public_id": "gaming-laptop-1",
+        "url": "https://example.com/images/gaming-laptop-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "GameTech",
+    "stock": 12,
+    "numOfReviews": 110,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:35:00"
+    },
+    {
+    "name": "Smartphone Wireless Charging Pad",
+    "price": 24.99,
+    "description": "Charge your smartphone wirelessly with this sleek and efficient charging pad compatible with various devices.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "wireless-charging-pad-1",
+        "url": "https://example.com/images/wireless-charging-pad-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "ChargeHub",
+    "stock": 25,
+    "numOfReviews": 75,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:40:00"
+    },
+    {
+    "name": "Virtual Reality Headset",
+    "price": 249.99,
+    "description": "Immerse yourself in virtual worlds with this advanced VR headset featuring realistic visuals and responsive controls.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "vr-headset-1",
+        "url": "https://example.com/images/vr-headset-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "VirtualRealm",
+    "stock": 18,
+    "numOfReviews": 88,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:45:00"
+    },
+    {
+    "name": "Wireless Ergonomic Keyboard and Mouse Combo",
+    "price": 59.99,
+    "description": "Enhance your productivity with this wireless ergonomic keyboard and mouse combo for comfortable and efficient work.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "ergonomic-keyboard-mouse-1",
+        "url": "https://example.com/images/ergonomic-keyboard-mouse-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "TechComfort",
+    "stock": 22,
+    "numOfReviews": 65,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:50:00"
+    },
+    {
+    "name": "Portable External SSD Drive",
+    "price": 89.99,
+    "description": "Expand your storage capacity with this portable external SSD drive for fast and reliable data transfer.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "external-ssd-drive-1",
+        "url": "https://example.com/images/external-ssd-drive-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "DataVault",
+    "stock": 15,
+    "numOfReviews": 80,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:55:00"
+    },
+    {
+    "name": "Organic Cotton T-Shirt",
+    "price": 24.99,
+    "description": "A comfortable and stylish tee made from 100% organic cotton.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "organic-cotton-tee-1",
+        "url": "https://example.com/images/organic-cotton-tee-1.jpg"
+    }],
+    "category": "Clothing",
+    "seller": "Eco Fashion",
+    "stock": 15,
+    "numOfReviews": 87,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:25:00"
+    },
+    {
+    "name": "Recycled Backpack",
+    "price": 39.99,
+    "description": "A durable backpack made from recycled materials, perfect for eco-conscious individuals.",
+    "ratings": 4.5,
+    "images": [{
+        "public_id": "recycled-backpack-1",
+        "url": "https://example.com/images/recycled-backpack-1.jpg"
+    }],
+    "category": "Accessories",
+    "seller": "Green Gear",
+    "stock": 25,
+    "numOfReviews": 65,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:30:00"
+    },
+    {
+    "name": "Bamboo Toothbrush Set",
+    "price": 12.99,
+    "description": "A set of eco-friendly toothbrushes made from sustainable bamboo.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "bamboo-toothbrush-1",
+        "url": "https://example.com/images/bamboo-toothbrush-1.jpg"
+    }],
+    "category": "Personal Care",
+    "seller": "Green Living",
+    "stock": 30,
+    "numOfReviews": 42,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:35:00"
+    },
+    {
+    "name": "Solar-Powered Desk Lamp",
+    "price": 49.99,
+    "description": "A sleek desk lamp powered by solar energy, perfect for energy-efficient lighting.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "solar-desk-lamp-1",
+        "url": "https://example.com/images/solar-desk-lamp-1.jpg"
+    }],
+    "category": "Home & Office",
+    "seller": "SolarTech",
+    "stock": 20,
+    "numOfReviews": 56,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:40:00"
+    },
+    {
+    "name": "Reusable Glass Water Bottle",
+    "price": 16.99,
+    "description": "A durable glass water bottle with a silicone sleeve, perfect for reducing single-use plastic.",
+    "ratings": 4.4,
+    "images": [{
+        "public_id": "glass-water-bottle-1",
+        "url": "https://example.com/images/glass-water-bottle-1.jpg"
+    }],
+    "category": "Kitchen & Dining",
+    "seller": "EcoBottle",
+    "stock": 18,
+    "numOfReviews": 78,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:45:00"
+    },
+    {
+    "name": "Organic Cotton Bed Sheets",
+    "price": 59.99,
+    "description": "Luxurious bed sheets made from 100% organic cotton for a comfortable night's sleep.",
+    "ratings": 4.9,
+    "images": [{
+        "public_id": "organic-bed-sheets-1",
+        "url": "https://example.com/images/organic-bed-sheets-1.jpg"
+    }],
+    "category": "Bedroom",
+    "seller": "EcoComfort",
+    "stock": 12,
+    "numOfReviews": 93,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:50:00"
+    },
+    {
+    "name": "Fair Trade Coffee Beans",
+    "price": 9.99,
+    "description": "Ethically sourced and fair trade coffee beans for a delicious and guilt-free brew.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "fair-trade-coffee-1",
+        "url": "https://example.com/images/fair-trade-coffee-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "FairBrew",
+    "stock": 40,
+    "numOfReviews": 37,
+    "reviews": [],
+    "createdAt": "2024-01-26T14:55:00"
+    },
+    {
+    "name": "Biodegradable Dish Soap",
+    "price": 7.99,
+    "description": "Environmentally friendly dish soap in a biodegradable packaging, reducing plastic waste.",
+    "ratings": 4.5,
+    "images": [{
+        "public_id": "biodegradable-dish-soap-1",
+        "url": "https://example.com/images/biodegradable-dish-soap-1.jpg"
+    }],
+    "category": "Household Essentials",
+    "seller": "GreenClean",
+    "stock": 35,
+    "numOfReviews": 50,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:00:00"
+    },
+    {
+    "name": "Upcycled Denim Jeans",
+    "price": 34.99,
+    "description": "Fashionable jeans crafted from upcycled denim, promoting sustainable fashion.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "upcycled-jeans-1",
+        "url": "https://example.com/images/upcycled-jeans-1.jpg"
+    }],
+    "category": "Clothing",
+    "seller": "ReFashioned",
+    "stock": 22,
+    "numOfReviews": 60,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:05:00"
+    },
+    {
+    "name": "Eco-Friendly Smartphone Case",
+    "price": 14.99,
+    "description": "A stylish and eco-friendly phone case made from sustainable materials.",
+    "ratings": 4.4,
+    "images": [{
+        "public_id": "eco-phone-case-1",
+        "url": "https://example.com/images/eco-phone-case-1.jpg"
+    }],
+    "category": "Electronics",
+    "seller": "GreenTech",
+    "stock": 28,
+    "numOfReviews": 72,
+    "reviews": [],
+    "createdAt": "2024-01-26T15:10:00"
+    },
+    {
+        "name": "Organic Chia Seeds",
+        "price": 8.99,
+        "description": "Boost your nutrition with these organic chia seeds, packed with omega-3 fatty acids and fiber.",
+        "ratings": 4.7,
+        "images": [{
+        "public_id": "chia-seeds-1",
+        "url": "https://example.com/images/chia-seeds-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "Organic Harvest",
+    "stock": 30,
+    "numOfReviews": 92,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:00:00"
+    },
+    {
+    "name": "Artisanal Dark Chocolate Bar",
+    "price": 5.99,
+    "description": "Indulge in the rich flavor of this artisanal dark chocolate bar, made with high-quality cocoa beans.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "dark-chocolate-bar-1",
+        "url": "https://example.com/images/dark-chocolate-bar-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "CocoaCraft",
+    "stock": 25,
+    "numOfReviews": 78,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:05:00"
+    },
+    {
+    "name": "Organic Quinoa",
+    "price": 6.99,
+    "description": "Add a nutritious twist to your meals with this organic quinoa, a versatile and protein-rich grain.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "organic-quinoa-1",
+        "url": "https://example.com/images/organic-quinoa-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "PureGrains",
+    "stock": 35,
+    "numOfReviews": 65,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:10:00"
+    },
+    {
+    "name": "Premium Arabica Coffee Beans",
+    "price": 12.99,
+    "description": "Experience the rich and smooth taste of premium Arabica coffee beans, perfect for your morning brew.",
+    "ratings": 4.9,
+    "images": [{
+        "public_id": "arabica-coffee-beans-1",
+        "url": "https://example.com/images/arabica-coffee-beans-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "BeanHeaven",
+    "stock": 28,
+    "numOfReviews": 85,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:15:00"
+    },
+    {
+    "name": "Gourmet Olive Oil Set",
+    "price": 18.99,
+    "description": "Elevate your culinary creations with this gourmet set of extra virgin olive oils from different regions.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "olive-oil-set-1",
+        "url": "https://example.com/images/olive-oil-set-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "OliveHarmony",
+    "stock": 15,
+    "numOfReviews": 90,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:25:00"
+    },
+    {
+    "name": "Spicy Jalapeño Hot Sauce",
+    "price": 7.99,
+    "description": "Add a kick to your meals with this spicy jalapeño hot sauce, perfect for heat enthusiasts.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "jalapeno-hot-sauce-1",
+        "url": "https://example.com/images/jalapeno-hot-sauce-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "SpiceFusion",
+    "stock": 30,
+    "numOfReviews": 50,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:30:00"
+    },
+    {
+    "name": "Organic Acai Berry Smoothie Packs",
+    "price": 14.99,
+    "description": "Create delicious and healthy smoothies with these organic acai berry packs, rich in antioxidants.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "acai-smoothie-packs-1",
+        "url": "https://example.com/images/acai-smoothie-packs-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "SmoothieBliss",
+    "stock": 25,
+    "numOfReviews": 68,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:35:00"
+    },
+
+    {
+    "name": "Organic Chia Seeds",
+    "price": 8.99,
+    "description": "Boost your nutrition with these organic chia seeds, packed with omega-3 fatty acids and fiber.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "chia-seeds-1",
+        "url": "https://example.com/images/chia-seeds-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "Organic Harvest",
+    "stock": 30,
+    "numOfReviews": 92,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:00:00"
+    },
+    {
+    "name": "Artisanal Dark Chocolate Bar",
+    "price": 5.99,
+    "description": "Indulge in the rich flavor of this artisanal dark chocolate bar, made with high-quality cocoa beans.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "dark-chocolate-bar-1",
+        "url": "https://example.com/images/dark-chocolate-bar-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "CocoaCraft",
+    "stock": 25,
+    "numOfReviews": 78,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:05:00"
+    },
+    {
+    "name": "Organic Quinoa",
+    "price": 6.99,
+    "description": "Add a nutritious twist to your meals with this organic quinoa, a versatile and protein-rich grain.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "organic-quinoa-1",
+        "url": "https://example.com/images/organic-quinoa-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "PureGrains",
+    "stock": 35,
+    "numOfReviews": 65,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:10:00"
+    },
+    {
+    "name": "Premium Arabica Coffee Beans",
+    "price": 12.99,
+    "description": "Experience the rich and smooth taste of premium Arabica coffee beans, perfect for your morning brew.",
+    "ratings": 4.9,
+    "images": [{
+        "public_id": "arabica-coffee-beans-1",
+        "url": "https://example.com/images/arabica-coffee-beans-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "BeanHeaven",
+    "stock": 28,
+    "numOfReviews": 85,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:15:00"
+    },
+    {
+    "name": "Organic Green Tea",
+    "price": 9.99,
+    "description": "Savor the health benefits of organic green tea with its refreshing taste and antioxidant properties.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "organic-green-tea-1",
+        "url": "https://example.com/images/organic-green-tea-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "GreenTeaHouse",
+    "stock": 20,
+    "numOfReviews": 72,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:20:00"
+    },
+    {
+    "name": "Gourmet Olive Oil Set",
+    "price": 18.99,
+    "description": "Elevate your culinary creations with this gourmet set of extra virgin olive oils from different regions.",
+    "ratings": 4.8,
+    "images": [{
+        "public_id": "olive-oil-set-1",
+        "url": "https://example.com/images/olive-oil-set-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "OliveHarmony",
+    "stock": 15,
+    "numOfReviews": 90,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:25:00"
+    },
+    {
+    "name": "Spicy Jalapeño Hot Sauce",
+    "price": 7.99,
+    "description": "Add a kick to your meals with this spicy jalapeño hot sauce, perfect for heat enthusiasts.",
+    "ratings": 4.6,
+    "images": [{
+        "public_id": "jalapeno-hot-sauce-1",
+        "url": "https://example.com/images/jalapeno-hot-sauce-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "SpiceFusion",
+    "stock": 30,
+    "numOfReviews": 50,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:30:00"
+    },
+    {
+    "name": "Organic Acai Berry Smoothie Packs",
+    "price": 14.99,
+    "description": "Create delicious and healthy smoothies with these organic acai berry packs, rich in antioxidants.",
+    "ratings": 4.7,
+    "images": [{
+        "public_id": "acai-smoothie-packs-1",
+        "url": "https://example.com/images/acai-smoothie-packs-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "SmoothieBliss",
+    "stock": 25,
+    "numOfReviews": 68,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:35:00"
+    },
+    {
+    "name": "Handcrafted Pasta Variety Pack",
+    "price": 11.99,
+    "description": "Explore different pasta shapes and flavors with this handcrafted pasta variety pack, made with premium ingredients.",
+    "ratings": 4.5,
+    "images": [{
+        "public_id": "pasta-variety-pack-1",
+        "url": "https://example.com/images/pasta-variety-pack-1.jpg"
+    }],
+    "category": "Food",
+    "seller": "PastaCraft",
+    "stock": 18,
+    "numOfReviews": 60,
+    "reviews": [],
+    "createdAt": "2024-01-26T16:40:00"
+    }
+]
