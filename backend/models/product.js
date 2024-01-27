@@ -38,7 +38,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please select a category for this product'],
         enum: {
-            values: ['Clothing', 'Electronics', 'Food', 'Grocery', 'Books', 'Beauty/Health'],
+            values: ['Clothing', 'Electronics', 'Food', 'Grocery', 'Books', 'Beauty/Health', 'Accessory', 'Home/Living', 'Kitchen'],
             message: 'Please select a valid category for this product'
         }
     },

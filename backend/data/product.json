@@ -185,7 +185,7 @@
         "public_id": "recycled-backpack-1",
         "url": "https://example.com/images/recycled-backpack-1.jpg"
     }],
-    "category": "Accessories",
+    "category": "Accessory",
     "seller": "Green Gear",
     "stock": 25,
     "numOfReviews": 65,
@@ -201,7 +201,7 @@
         "public_id": "bamboo-toothbrush-1",
         "url": "https://example.com/images/bamboo-toothbrush-1.jpg"
     }],
-    "category": "Personal Care",
+    "category": "Beauty/Health",
     "seller": "Green Living",
     "stock": 30,
     "numOfReviews": 42,
@@ -217,7 +217,7 @@
         "public_id": "solar-desk-lamp-1",
         "url": "https://example.com/images/solar-desk-lamp-1.jpg"
     }],
-    "category": "Home & Office",
+    "category": "Home/Living",
     "seller": "SolarTech",
     "stock": 20,
     "numOfReviews": 56,
@@ -233,7 +233,7 @@
         "public_id": "glass-water-bottle-1",
         "url": "https://example.com/images/glass-water-bottle-1.jpg"
     }],
-    "category": "Kitchen & Dining",
+    "category": "Kitchen",
     "seller": "EcoBottle",
     "stock": 18,
     "numOfReviews": 78,
@@ -249,7 +249,7 @@
         "public_id": "organic-bed-sheets-1",
         "url": "https://example.com/images/organic-bed-sheets-1.jpg"
     }],
-    "category": "Bedroom",
+    "category": "Home/Living",
     "seller": "EcoComfort",
     "stock": 12,
     "numOfReviews": 93,
@@ -281,7 +281,7 @@
         "public_id": "biodegradable-dish-soap-1",
         "url": "https://example.com/images/biodegradable-dish-soap-1.jpg"
     }],
-    "category": "Household Essentials",
+    "category": "Home/Living",
     "seller": "GreenClean",
     "stock": 35,
     "numOfReviews": 50,
