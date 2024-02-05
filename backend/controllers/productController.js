@@ -16,6 +16,7 @@ exports.newProduct = catchAsyncError (async (req, res, next) => {
 })
 
 // get all products => /api/v1/products?keyword=''
+// /api/v1/products?keyword=Wireless&price[gte]=100&price[lte]=200
 exports.getProducts = catchAsyncError (async (req, res, next) => {
 
     const resPerPage = 4;
