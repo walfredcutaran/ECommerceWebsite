@@ -9,5 +9,5 @@ router.route('/login').post(loginUser);
 router.route('/password/forgot').post(forgotPassword);
 
 router.route('/logout').get(logoutUser);
-
+ 
 module.exports = router;
