@@ -1,7 +1,10 @@
+// schema
 const Product = require('../models/product');
+
 const dotenv = require('dotenv');
 const connectDatabase = require('../config/database');
 
+// product.json
 const products = require('../data/product');
 
 // seeting dotenv file

@@ -1,11 +1,14 @@
+// * schema
 const Product = require('../models/product');
 
 const errorHandler = require('../utils/errorHandler');
 const catchAsyncError = require('../middlewares/catchAsyncErrors');
 const APIFeatures = require('../utils/apiFeatures');
 
-// create new Product => /api/v1/product/new
+// * create new Product => /api/v1/product/new
 exports.newProduct = catchAsyncError (async (req, res, next) => {
+
+    req.body.user = req.user.id;
 
     const product = await Product.create(req.body);
 
@@ -15,8 +18,8 @@ exports.newProduct = catchAsyncError (async (req, res, next) => {
     })
 })
 
-// get all products => /api/v1/products?keyword=''
-// /api/v1/products?keyword=Wireless&price[gte]=100&price[lte]=200
+// * get all products => /api/v1/products?keyword=''
+// * /api/v1/products?keyword=Wireless&price[gte]=100&price[lte]=200
 exports.getProducts = catchAsyncError (async (req, res, next) => {
 
     const resPerPage = 4;
@@ -37,8 +40,7 @@ exports.getProducts = catchAsyncError (async (req, res, next) => {
     })
 })
 
-// get single product details => /api/v1/products/:id
-
+// * get single product details => /api/v1/products/:id
 exports.getSingleProduct = catchAsyncError (async (req, res, next) => {
 
     const product = await Product.findById(req.params.id);
@@ -54,8 +56,7 @@ exports.getSingleProduct = catchAsyncError (async (req, res, next) => {
     })
 })
 
-// update product details => /api/v1/product/:id
-
+// * update product details => /api/v1/product/:id
 exports.updateProduct = catchAsyncError (async (req, res, next) => {
 
     let product = await Product.findById(req.params.id);
@@ -77,7 +78,7 @@ exports.updateProduct = catchAsyncError (async (req, res, next) => {
     })
 })
 
-// delete product => /api/v1/product/:id
+// * delete product => /api/v1/product/:id
 exports.deleteProduct = catchAsyncError (async (req, res, next) => {
 
     const product = await Product.findById(req.params.id);
