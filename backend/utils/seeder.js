@@ -7,7 +7,7 @@ const connectDatabase = require('../config/database');
 // product.json
 const products = require('../data/product');
 
-// seeting dotenv file
+// setting dotenv file
 dotenv.config({path: 'backend/config/config.env'});
 
 connectDatabase();
