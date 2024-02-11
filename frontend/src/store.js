@@ -4,12 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { productReducer } from './reducers/productReducers';
 
-const rootReducer = combineReducers({
+const reducer = combineReducers({
   products: productReducer,
 });
 
-// Ensure reducer is assigned rootReducer
-const reducer = rootReducer;
+
 
 let initialState = {};
 
