@@ -22,21 +22,26 @@ exports.newProduct = catchAsyncError (async (req, res, next) => {
 // * /api/v1/products?keyword=Wireless&price[gte]=100&price[lte]=200
 exports.getProducts = catchAsyncError (async (req, res, next) => {
 
-    const resPerPage = 4;
+    // return next(new errorHandler('My Error', 401))
+
+    const resPerPage = 8;
     const productCount = await Product.countDocuments();
 
     const apiFeatures = new APIFeatures(Product.find(), req.query)
                         .search()
                         .filter()
-                        .pagination(resPerPage)
+                        .pagination(resPerPage) 
 
     const products = await apiFeatures.query;
 
-    res.status(200).json({
-        success: true,
-        productCount,
-        products
-    })
+    
+        res.status(200).json({
+            success: true,
+            productCount,
+            products
+        })
+    
+
 })
 
 // * get single product details => /api/v1/products/:id

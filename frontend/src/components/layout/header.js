@@ -9,7 +9,7 @@ const Header = () => {
         <div className="col-12 col-md-3">
         <div className="navbar-brand">
             <img 
-                src={logoImage}
+                src={'logoImage'}
                 alt="logo" 
                 width="250px"
                 height="100px"
