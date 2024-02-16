@@ -133,16 +133,16 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     }
 }
 
-export const getProductDetails = (id) => async (dispatch) => {
+export const getProductDetails = (productID) => async (dispatch) => {
     try {
 
         dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/v1/product/${id}`)
+        const { data } = await axios.get(`/api/v1/product/${productID}`)
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
-            payload: data.product
+            payload: data.product 
         })
 
     } catch (error) {
