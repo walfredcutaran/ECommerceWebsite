@@ -9,7 +9,7 @@ const ProductDetails = ({ match }) => {
 
   const dispatch = useDispatch();
 
-  const { loading, error, product } = useSelector(state => state.ProductDetails)
+  const { loading, error, product } = useSelector(state => state.productDetails)
 
   useEffect(() => {
 
