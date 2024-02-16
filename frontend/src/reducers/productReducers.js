@@ -69,15 +69,15 @@ export const productsReducer = (state = { products: [] }, action) => {
         error: action.payload,
       };
 
-    // case CLEAR_ERRORS:
-    //     return {
-    //         ...state,
-    //         error: null
-    //     }
+    case CLEAR_ERRORS:
+        return {
+            ...state,
+            error: null
+        };
 
     default:
       return state;
-  }
+  };
 };
 
 // export const productReducer = (state = {}, action) => {

@@ -1,13 +1,14 @@
 import React, { Fragment, useEffect } from "react";
 
 import MetaData from "./layout/metadata";
+import Loader from "./layout/loadingAnimation";
 
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector, loading } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from 'react-alert'
 import { getProducts } from "../actions/productActions";
-import Loader from "./layout/loadingAnimation";
+
 
 
 const Home = () => {
@@ -15,16 +16,13 @@ const Home = () => {
   const alert = useAlert()
   const dispatch = useDispatch();
 
-  const { loading, products, error, productsCount } = useSelector(
-    (state) => state.products
-  );
+  const { loading, products, error } = useSelector(state => state.products);
 
   useEffect(() => {
     
-    dispatch(getProducts());
+      // add error handling
 
-     alert.error(error)
-     console.error(error);
+     dispatch(getProducts());
     
   }, [dispatch, alert, error]);
 

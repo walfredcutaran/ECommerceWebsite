@@ -22,8 +22,6 @@ exports.newProduct = catchAsyncError (async (req, res, next) => {
 // * /api/v1/products?keyword=Wireless&price[gte]=100&price[lte]=200
 exports.getProducts = catchAsyncError (async (req, res, next) => {
 
-    // return next(new errorHandler('My Error', 401))
-
     const resPerPage = 8;
     const productCount = await Product.countDocuments();
 
