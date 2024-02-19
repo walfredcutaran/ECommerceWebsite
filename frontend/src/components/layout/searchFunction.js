@@ -1,49 +1,53 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAlert } from 'react-alert';
 
 const Search = () => {
+  const [keyword, setKeyword] = useState('');
+  const [showSearchBar, setShowSearchBar] = useState(true);
+  const navigate = useNavigate();
+  const alert = useAlert();
 
-    const [keyword, setKeyword] = useState('');
-    const navigate = useNavigate();
-    const alert = useAlert()  
+  // console.log("DEBUG: ", showSearchBar);
 
-  // Handle navigation only when the form is submitted or the keyword is valid
   const handleSearch = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault();
 
-    if (keyword.trim()) { // Ensure keyword has actual content
+    if (keyword.trim()) {
+      setShowSearchBar(true);
       navigate(`/search/${keyword}`);
+
     } else {
       alert.show("Please enter a keyword.");
     }
   };
 
-  // handle navigation onValidate or onSubmit
   const debouncedSearch = (e) => {
     setKeyword(e.target.value);
   };
 
   return (
     <div>
-      <form onSubmit={handleSearch}>
-      <div className="input-group">
+      {showSearchBar && (
+        <form onSubmit={handleSearch}>
+          <div className="input-group">
             <input
-            type="text"
-            id="search_field"
-            className="form-control"
-            placeholder="Enter Product Name ..."
-            onChange={debouncedSearch}
+              type="text"
+              id="search_field"
+              className="form-control"
+              placeholder="Enter Product Name ..."
+              onChange={debouncedSearch}
             />
             <div className="input-group-append">
-            <button id="search_btn" className="btn">
+              <button id="search_btn" className="btn">
                 <i className="fa fa-search" aria-hidden="true"></i>
-            </button>
+              </button>
             </div>
-        </div>
-      </form>
+          </div>
+        </form>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

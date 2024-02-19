@@ -7,7 +7,7 @@ import Loader from "../layout/loadingAnimation";
 import Metadata from "../layout/metadata";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = ({ match }) => {
+const ProductDetails = () => {
   const { id } = useParams();
 
   const dispatch = useDispatch();
@@ -157,6 +157,7 @@ const ProductDetails = ({ match }) => {
                             name="review"
                             id="review"
                             className="form-control mt-3"
+                            style={{resize: "none"}}
                           ></textarea>
 
                           <button

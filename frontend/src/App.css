@@ -31,6 +31,16 @@ nav {
     padding: 1rem 1rem;
 }
 
+.logo {
+    font-family: "Josefin Slab", serif;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+}
+
+a:hover { cursor: pointer; }
+
 #search_btn {
     background-color: #febd69;
 }
@@ -51,6 +61,19 @@ nav {
     padding: 0.4rem 1.8rem;
     font-family: calibri;
 }
+
+.modal {
+    /* position: absolute; */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* * to prevent webpage from moving when opening a modal */
+.modal-open {
+    overflow: scroll;
+}
+
 
 #cart {
     font-size: 1rem;

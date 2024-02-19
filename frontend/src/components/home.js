@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Pagination from 'react-js-pagination';
-
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+import Products from '../components/layout/productsHome'
 import MetaData from "./layout/metadata";
 import Loader from "./layout/loadingAnimation";
 
@@ -10,13 +12,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from 'react-alert';
 import { getProducts } from "../actions/productActions";
 
+const createSliderWithTooltip = Slider.createSliderWithTooltip;
 
-
-const Home = ({ match }) => {
+const Home = () => {
 
   const { keyword } = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [price, setPrice] = useState([1, 1000])
 
   const alert = useAlert()  
   const dispatch = useDispatch();
@@ -27,9 +30,9 @@ const Home = ({ match }) => {
     
       // add error handling
 
-     dispatch(getProducts(keyword, currentPage));
+    dispatch(getProducts(keyword, currentPage, price));
     
-  }, [dispatch, alert, error, keyword, currentPage]);
+  }, [dispatch, alert, error, keyword, currentPage, price]);
 
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
@@ -45,76 +48,68 @@ const Home = ({ match }) => {
 
           <h1 id="products_heading">Latest Products</h1>
 
-          <section id="products" className="container mt-5">
-            <div className="row">
-              {products &&
-                products.map((product) => (
-                  <div
-                    key={product._id}
-                    className="col-sm-12 col-md-6 col-lg-3 my-3"
-                  >
-                    <div className="card p-3 rounded">
-                      <img
-                        className="card-img-top mx-auto"
-                        src={product.images[0].url}
-                        alt="logo"
-                      />
-                      <div className="card-body d-flex flex-column">
-                        <h5 className="card-title">
-                          <Link to={`/product/${product._id}`}>
-                            {product.name}
-                          </Link>
-                        </h5>
-                        <div className="ratings mt-auto">
-                          <div className="rating-outer">
-                            <div
-                              className="rating-inner"
-                              style={{
-                                width: `${(product.ratings / 5) * 100}%`,
-                              }}
-                            ></div>
-                          </div>
-                          <span
-                            id="no_o f_reviews"
-                            style={{ color: "grey", fontSize: 15 }}
-                          >
-                            ({product.numOfReviews})
-                          </span>
-                        </div>
-                        <p className="card-text">${product.price}</p>
-                        <Link
-                          to={`/product/${product._id}`}
-                          id="view_btn"
-                          className="btn btn-block"
-                        >
-                          View Details
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </section>
-          
-          {resPerPage <= productsCount && (
-            <div className="d-flex justify-content-center mt-5">
-            {productsCount && (
-              <Pagination
-                activePage={currentPage}
-                itemsCountPerPage={resPerPage}
-                totalItemsCount={productsCount}
-                onChange={setCurrentPageNo}
-                nextPageText={"Next"}
-                prevPageText={"Prev"}
-                firstPageText={"First"}
-                lastPageText={"Last"}
-                itemClass="page-item"
-                linkClass="page-link"
-              />
-            )}
-          </div>
+          {keyword ? (
+            <Fragment>
+              <div className="col-6 col-md-3 mt-5 mb-5">
+                <div className="px-5">
+                  <Slider
+                    range
+                    marks={{
+                      1: `$1`,
+                      1000: `$1000`,
+                    }}
+                    min={1}
+                    max={1000}
+                    defaultValue={[1, 1000]}
+                    tipFormatter={(value) => `%${value}`}
+                    tipProps={{
+                      placement: "top",
+                      visible: true,
+                    }}
+                    value={price}
+                    onChange={(price) => setPrice(price)}
+                  />
+                </div>
+              </div>
+
+              <div className="col-6 col-md-9">
+                <div class="row">
+                  {products &&
+                    products.map((product) => (
+                      <Products key={product._id} product={product} col={4} />
+                    ))}
+                </div>
+              </div>
+            </Fragment>
+          ) : (
+            <section id="products" className="container mt-5">
+              <div className="row">
+                {products &&
+                  products.map((product) => (
+                    <Products key={product._id} product={product} col={3} />
+                  ))}
+              </div>
+            </section>
           )}
 
+          {resPerPage <= productsCount && (
+            <div className="d-flex justify-content-center mt-5">
+              {productsCount && (
+                <Pagination
+                  activePage={currentPage}
+                  itemsCountPerPage={resPerPage}
+                  totalItemsCount={productsCount}
+                  onChange={setCurrentPageNo}
+                  nextPageText={"Next"}
+                  prevPageText={"Prev"}
+                  firstPageText={"First"}
+                  lastPageText={"Last"}
+                  itemClass="page-item"
+                  linkClass="page-link"
+                />
+              )}
+            </div>
+          )}
         </Fragment>
       )}
     </Fragment>
