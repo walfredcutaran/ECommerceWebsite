@@ -35,7 +35,7 @@ const Search = () => {
               type="text"
               id="search_field"
               className="form-control"
-              placeholder="Enter Product Name ..."
+              placeholder="Enter Product Name..."
               onChange={debouncedSearch}
             />
             <div className="input-group-append">

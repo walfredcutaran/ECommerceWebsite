@@ -51,15 +51,19 @@ a:hover { cursor: pointer; }
 }
 
 #search_field {
-    height: 2.4rem;
+    height: 3rem;
     padding: 1rem;
+    font-size: large;
 }
 
 #login_btn,
 #view_btn {
-    background-color: #febd69;
-    padding: 0.4rem 1.8rem;
-    font-family: calibri;
+    /* background-color: #febd69; */
+    /* padding: 0.4rem 1.8rem; */
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    
 }
 
 .modal {
@@ -87,6 +91,7 @@ a:hover { cursor: pointer; }
     color: black;
     font-weight: bold;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 /* Home page */

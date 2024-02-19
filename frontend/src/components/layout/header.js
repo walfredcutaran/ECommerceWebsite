@@ -28,18 +28,24 @@ const Header = () => {
             </Routes>
           </div>
 
-          <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
-            <button className="btn" id="login_btn">
-              Login
-            </button>
 
+
+          <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
+            
+            <i class="fa-solid fa-moon fa-2xl mr-2" style={{ color: 'white', cursor: 'pointer' }}></i>
+  
             <span id="cart" className="ml-3">
-              Cart
+            <i className="fa-solid fa-cart-shopping fa-2xl" style={{ cursor: 'pointer' }}></i>
             </span>
-            <span className="ml-1" id="cart_count">
+            <span className="ml-2" id="cart_count">
               2
             </span>
+
+            <button className="btn ml-5" id="login_btn">
+              Login
+          </button>
           </div>
+
         </nav>
       </Fragment>
     );
