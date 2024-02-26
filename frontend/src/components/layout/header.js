@@ -32,7 +32,7 @@ const Header = () => {
 
           <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
             
-            <i class="fa-solid fa-moon fa-2xl mr-2" style={{ color: 'white', cursor: 'pointer' }}></i>
+            <i className="fa-solid fa-moon fa-2xl mr-2" style={{ color: 'white', cursor: 'pointer' }}></i>
   
             <span id="cart" className="ml-3">
             <i className="fa-solid fa-cart-shopping fa-2xl" style={{ cursor: 'pointer' }}></i>

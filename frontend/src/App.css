@@ -103,6 +103,16 @@ a:hover { cursor: pointer; }
     height: 100%;
 }
 
+.card-suggested {
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-suggested h5:hover {
+    color: #fa9c23;
+    text-decoration: none;
+}
+
 .card-title a {
     color: #2e2e2e;
 }
@@ -129,6 +139,7 @@ a:hover { cursor: pointer; }
     width: 200px;
     height: 150px;
 }
+
 
 .ratings {
     font-size: 1.2rem;
@@ -187,12 +198,25 @@ footer {
     font-weight: bold;
 }
 
-#cart_btn,
+#product_price_suggested {
+    font-size: 1.8rem;
+    font-weight: bold
+}
+
+
 #review_btn {
     border-radius: 2rem;
     background-color: #fa9c23;
     border: none;
     padding: 0.5rem 2rem;
+}
+
+#cart_btn {
+    border-radius: 2rem;
+    background-color: #fa9c23;
+    border: none;
+    padding: 0.5rem 2rem;
+    height: 40px;
 }
 
 #product_seller {

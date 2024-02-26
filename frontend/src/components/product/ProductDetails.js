@@ -56,29 +56,30 @@ const ProductDetails = () => {
               <span id="no_of_reviews">({product.numOfReviews})</span>
 
               <hr />
-
-              <p id="product_price">${product.price}</p>
-              <div className="stockCounter d-inline">
-                <span className="btn btn-danger minus">-</span>
-
-                <input
-                  type="number"
-                  className="form-control count d-inline"
-                  value="1"
-                  readOnly
-                />
-
-                <span className="btn btn-primary plus">+</span>
+              <div className="row container justify-content-lg-center justify-content-sm-start">
+                <p id="product_price" className="mt-1">
+                  ${product.price}
+                </p>
+                <div className="stockCounter d-inline ml-3 mt-2">
+                  <span className="btn btn-danger minus d-inline">-</span>
+                  <input
+                    type="number"
+                    className="form-control count d-inline"
+                    value="1"
+                    readOnly
+                  />
+                  <span className="btn btn-primary plus d-inline">+</span>
+                </div>
+                <button
+                  type="button"
+                  id="cart_btn"
+                  className="btn btn-primary ml-4 mt-2 d-inline"
+                >
+                  Add to Cart
+                </button>
               </div>
-              <button
-                type="button"
-                id="cart_btn"
-                className="btn btn-primary d-inline ml-4"
-              >
-                Add to Cart
-              </button>
 
-              <hr />
+              <hr className="mt-0" />
 
               <p>
                 Status:{" "}
@@ -157,7 +158,7 @@ const ProductDetails = () => {
                             name="review"
                             id="review"
                             className="form-control mt-3"
-                            style={{resize: "none"}}
+                            style={{ resize: "none" }}
                           ></textarea>
 
                           <button
@@ -174,6 +175,59 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="row container">
+            <div class="col-sm-6 col-md-4 col-lg-3 my-3 mx-2">
+              <div class="row card card-suggested p-3 rounded">
+                  <img
+                    class="card-img-left img-fluid"
+                    src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="logo"
+                  />
+                  <p id="product_price_suggested" className="mt-2">$199</p>
+                  <h5 class="card-title">Canon Camera HD</h5>
+                    <div className="ratings mt-auto">
+                      <div className="rating-outer mr-1">
+                          <div
+                          className="rating-inner"
+                          style={{
+                              width: `${(4 / 5) * 100}%`,
+                          }}
+                          ></div>
+                      </div>
+                    <span id="no_o f_reviews" style={{ color: "grey", fontSize: 15 }}>
+                      (21)
+                  </span>
+                  </div>
+              </div>             
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3 my-3 mx-2">
+              <div class="row card card-suggested p-3 rounded">
+                  <img
+                    class="card-img-left img-fluid"
+                    src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="logo"
+                  />
+                  <p id="product_price_suggested" className="mt-2">$199</p>
+                  <h5 class="card-title">Canon Camera HD</h5>
+                    <div className="ratings mt-auto">
+                      <div className="rating-outer mr-1">
+                          <div
+                          className="rating-inner"
+                          style={{
+                              width: `${(4 / 5) * 100}%`,
+                          }}
+                          ></div>
+                      </div>
+                    <span id="no_o f_reviews" style={{ color: "grey", fontSize: 15 }}>
+                      (21)
+                  </span>
+                  </div>
+              </div>             
+            </div>
+
           </div>
         </Fragment>
       )}
