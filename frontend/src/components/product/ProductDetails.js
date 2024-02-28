@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductDetails, clearErrors } from "../../actions/productActions";
+import { getProductDetails, getSuggestedProducts, clearErrors } from "../../actions/productActions";
 import { Carousel } from "react-bootstrap";
 
 import Loader from "../layout/loadingAnimation";
@@ -13,10 +13,19 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const { loading, product } = useSelector((state) => state.productDetails);
+  const { suggested } = useSelector((state) => state.suggestedProducts);
+
+
 
   useEffect(() => {
     dispatch(getProductDetails(id));
   }, [dispatch, id]);
+
+  useEffect(() => {
+    if (product && product.category) {
+      dispatch(getSuggestedProducts(product.category));
+    }
+  }, [dispatch, product]);
 
   return (
     <Fragment>
@@ -44,6 +53,7 @@ const ProductDetails = () => {
             <div className="col-12 col-lg-5 mt-5">
               <h3>{product.name}</h3>
               <p id="product_id">Product # {product._id}</p>
+              <p>{product.category}</p>
 
               <hr />
 
@@ -177,58 +187,47 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div class="row container">
-            <div class="col-sm-6 col-md-4 col-lg-3 my-3 mx-2">
-              <div class="row card card-suggested p-3 rounded">
+          <div className="row container">
+  {suggested !== null ? (
+    Array.isArray(suggested) && suggested.map((suggestedProduct) => (
+      <div className="col-sm-6 col-md-4 col-lg-3 my-3 mx-2" key={suggestedProduct._id}>
+        <div className="row card card-suggested p-3 rounded">
+          <Carousel pause="hover">
+            {suggestedProduct.images &&
+              suggestedProduct.images.map((image) => (
+                <Carousel.Item key={image.public_id}>
                   <img
-                    class="card-img-left img-fluid"
-                    src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="logo"
+                    className="d-block w-100"
+                    src={image.url}
+                    alt={suggestedProduct.title}
                   />
-                  <p id="product_price_suggested" className="mt-2">$199</p>
-                  <h5 class="card-title">Canon Camera HD</h5>
-                    <div className="ratings mt-auto">
-                      <div className="rating-outer mr-1">
-                          <div
-                          className="rating-inner"
-                          style={{
-                              width: `${(4 / 5) * 100}%`,
-                          }}
-                          ></div>
-                      </div>
-                    <span id="no_o f_reviews" style={{ color: "grey", fontSize: 15 }}>
-                      (21)
-                  </span>
-                  </div>
-              </div>             
+                </Carousel.Item>
+              ))}
+          </Carousel>
+          <h6 className="card-title my-2">{suggestedProduct.name}</h6>
+          <div className="ratings">
+            <div className="rating-outer mb-2">
+              <div
+                className="rating-inner"
+                style={{
+                  width: `${(suggestedProduct.ratings / 5) * 100}%`,
+                }}
+              ></div>
             </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3 my-3 mx-2">
-              <div class="row card card-suggested p-3 rounded">
-                  <img
-                    class="card-img-left img-fluid"
-                    src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="logo"
-                  />
-                  <p id="product_price_suggested" className="mt-2">$199</p>
-                  <h5 class="card-title">Canon Camera HD</h5>
-                    <div className="ratings mt-auto">
-                      <div className="rating-outer mr-1">
-                          <div
-                          className="rating-inner"
-                          style={{
-                              width: `${(4 / 5) * 100}%`,
-                          }}
-                          ></div>
-                      </div>
-                    <span id="no_o f_reviews" style={{ color: "grey", fontSize: 15 }}>
-                      (21)
-                  </span>
-                  </div>
-              </div>             
-            </div>
-
+            <span id="no_of_reviews" style={{ color: "grey", fontSize: 15 }}>
+              ({suggestedProduct.numOfReviews})
+            </span>
           </div>
+          <p id="product_price_suggested" className="mb-0">{suggestedProduct.price}</p>
+          <p className="mt-1 mb-0" style={{color: 'orange', fontSize: 20}}> less 20% </p>
+        </div>
+      </div>
+    ))
+  ) : (
+    console.log('No suggested products available')
+  )}
+</div>
+
         </Fragment>
       )}
     </Fragment>
