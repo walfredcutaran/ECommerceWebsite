@@ -137,10 +137,7 @@ a:hover { cursor: pointer; }
     color: white;
 }
 
-.card-img-top {
-    width: 200px;
-    height: 150px;
-}
+
 
 
 .ratings {
@@ -202,7 +199,8 @@ footer {
 
 #product_price_suggested {
     font-size: 1.4rem;
-    font-weight: bold
+    font-weight: bold;
+    color: black;
 }
 
 

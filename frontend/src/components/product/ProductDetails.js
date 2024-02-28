@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductDetails, getSuggestedProducts, clearErrors } from "../../actions/productActions";
 import { Carousel } from "react-bootstrap";
@@ -6,26 +6,32 @@ import { Carousel } from "react-bootstrap";
 import Loader from "../layout/loadingAnimation";
 import Metadata from "../layout/metadata";
 import { useParams } from "react-router-dom";
+import Products from '../layout/SuggestedProducts'
 
 const ProductDetails = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const { id } = useParams();
+
+
 
   const dispatch = useDispatch();
 
   const { loading, product } = useSelector((state) => state.productDetails);
-  const { suggested } = useSelector((state) => state.suggestedProducts);
+  const { productSuggested } = useSelector(state => state.suggestedProducts);
 
-
+  let excludeProductId = product._id
 
   useEffect(() => {
+    setIsLoading(true);
     dispatch(getProductDetails(id));
   }, [dispatch, id]);
 
-  useEffect(() => {
-    if (product && product.category) {
+  useEffect(() => { 
+    if (product.category) {
       dispatch(getSuggestedProducts(product.category));
     }
-  }, [dispatch, product]);
+  }, [dispatch, product.category, excludeProductId]);
 
   return (
     <Fragment>
@@ -188,46 +194,12 @@ const ProductDetails = () => {
           </div>
 
           <div className="row container">
-  {suggested !== null ? (
-    Array.isArray(suggested) && suggested.map((suggestedProduct) => (
-      <div className="col-sm-6 col-md-4 col-lg-3 my-3 mx-2" key={suggestedProduct._id}>
-        <div className="row card card-suggested p-3 rounded">
-          <Carousel pause="hover">
-            {suggestedProduct.images &&
-              suggestedProduct.images.map((image) => (
-                <Carousel.Item key={image.public_id}>
-                  <img
-                    className="d-block w-100"
-                    src={image.url}
-                    alt={suggestedProduct.title}
-                  />
-                </Carousel.Item>
+            {productSuggested
+              .filter((product) => product._id !== excludeProductId)
+              .map((product) => (
+                <Products key={product._id} product={product} />
               ))}
-          </Carousel>
-          <h6 className="card-title my-2">{suggestedProduct.name}</h6>
-          <div className="ratings">
-            <div className="rating-outer mb-2">
-              <div
-                className="rating-inner"
-                style={{
-                  width: `${(suggestedProduct.ratings / 5) * 100}%`,
-                }}
-              ></div>
-            </div>
-            <span id="no_of_reviews" style={{ color: "grey", fontSize: 15 }}>
-              ({suggestedProduct.numOfReviews})
-            </span>
           </div>
-          <p id="product_price_suggested" className="mb-0">{suggestedProduct.price}</p>
-          <p className="mt-1 mb-0" style={{color: 'orange', fontSize: 20}}> less 20% </p>
-        </div>
-      </div>
-    ))
-  ) : (
-    console.log('No suggested products available')
-  )}
-</div>
-
         </Fragment>
       )}
     </Fragment>

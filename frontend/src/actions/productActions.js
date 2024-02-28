@@ -7,6 +7,7 @@ import {
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
     PRODUCT_DETAILS_FAIL,
+    GET_SUGGESTED_PRODUCTS_REQUEST,
     GET_SUGGESTED_PRODUCTS_SUCCESS,
     GET_SUGGESTED_PRODUCTS_FAIL,
     CLEAR_ERRORS
@@ -41,13 +42,16 @@ export const getProducts = (keyword = '', currentPage = 1, price, category) => a
 
 export const getSuggestedProducts = (category) => async (dispatch) => {
     try {
+
+        dispatch({ type: GET_SUGGESTED_PRODUCTS_REQUEST });
+
         let link = `/api/v1/products?category=${category}`;
 
         const { data } = await axios.get(link);
 
         dispatch({
             type: GET_SUGGESTED_PRODUCTS_SUCCESS,
-            payload: data,
+            payload: data
         });
     } catch (error) {
         dispatch({

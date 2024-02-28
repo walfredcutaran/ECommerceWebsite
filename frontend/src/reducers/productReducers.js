@@ -5,6 +5,7 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
+  GET_SUGGESTED_PRODUCTS_REQUEST,
   GET_SUGGESTED_PRODUCTS_SUCCESS,
   GET_SUGGESTED_PRODUCTS_FAIL,
   CLEAR_ERRORS,
@@ -75,14 +76,17 @@ export const productDetailsReducer = (state = { product: {} }, action) => {
   }
 };
 
-export const suggestedProductsReducer = (state = { products: [] }, action) => {
+export const suggestedProductsReducer = (state = { productSuggested: [] }, action) => {
   switch (action.type) {
+    case GET_SUGGESTED_PRODUCTS_REQUEST:
+      return {
+        loading: true,
+        productSuggested: [],
+      };
     case GET_SUGGESTED_PRODUCTS_SUCCESS:
       return {
-        ...state,
         loading: false,
-        products: action.payload,
-        error: null,
+        productSuggested: action.payload.products
       };
     case GET_SUGGESTED_PRODUCTS_FAIL:
       return {
@@ -90,6 +94,12 @@ export const suggestedProductsReducer = (state = { products: [] }, action) => {
         loading: true,
         error: action.payload,
       };
+
+      case CLEAR_ERRORS:
+        return {
+          ...state,
+          error: null,
+        };
     default:
       return state;
   }
