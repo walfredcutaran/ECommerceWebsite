@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 import Products from '../layout/SuggestedProducts'
 
 const ProductDetails = () => {
-  const [isLoading, setIsLoading] = useState(false);
+
 
   const { id } = useParams();
 
@@ -23,7 +23,7 @@ const ProductDetails = () => {
   let excludeProductId = product._id
 
   useEffect(() => {
-    setIsLoading(true);
+
     dispatch(getProductDetails(id));
   }, [dispatch, id]);
 
@@ -192,7 +192,9 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-
+          <div class="col-sm-12 col-md-6 col-lg-3 container product-heading mb-3">
+            <h2>Related Products</h2>
+          </div>
           <div className="row container">
             {productSuggested
               .filter((product) => product._id !== excludeProductId)

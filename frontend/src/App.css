@@ -193,7 +193,7 @@ footer {
 }
 
 #product_price {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -201,6 +201,10 @@ footer {
     font-size: 1.4rem;
     font-weight: bold;
     color: black;
+}
+
+.card-img-top {
+    height: 150px;
 }
 
 

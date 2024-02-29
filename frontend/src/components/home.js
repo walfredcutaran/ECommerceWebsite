@@ -19,7 +19,7 @@ const Home = () => {
   const { keyword } = useParams()
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [price, setPrice] = useState([1, 1000])
+  const [price, setPrice] = useState([1, 5000])
   const [category, setCategory] = useState('')
 
   const categories = [

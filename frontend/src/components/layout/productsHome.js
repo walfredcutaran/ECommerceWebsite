@@ -30,7 +30,7 @@ return (
             ({product.numOfReviews})
             </span>
         </div>
-        <p className="card-text">${product.price}</p>
+        <p className="card-text" id="product-price">${product.price}</p>
         <Link
             to={`/product/${product._id}`}
             id="view_btn"
