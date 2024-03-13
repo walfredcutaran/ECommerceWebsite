@@ -1,7 +1,7 @@
 const app = require('./app');
 const connectDatabase = require('./config/database');
 
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
 // handle uncaught exceptions
 process.on('uncaughtException', error => {
@@ -11,7 +11,10 @@ process.on('uncaughtException', error => {
 })
 
 // Setting up config file
-dotenv.config({path: 'backend/config/config.env'});
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+    require('dotenv').dotenv.config({path: 'backend/config/config.env'});
+}
+
 
 // Connecting to database
 connectDatabase();
