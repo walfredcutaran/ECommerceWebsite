@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const productsHome = ({ product, col }) => {
+const ProductsHome = ({ product, col }) => {
+
 return (
-    <div className={`col-sm-12 col-md-6 col-lg-${col} my-3`}>
-    <div className="card p-3 rounded">
+    <div className={`col-12 col-sm-6 col-md-6 col-lg-${col} my-3`}>
+    <div className="card p-3 ">
         <Link to={`/product/${product._id}`}>
         {" "}
         <img
+            loading="lazy"
+            id="product-img-home"
             className="card-img-top mx-auto"
             src={product.images[0].url}
             alt="logo"
@@ -31,17 +34,19 @@ return (
             </span>
         </div>
         <p className="card-text" id="product-price">${product.price}</p>
+
         <Link
             to={`/product/${product._id}`}
             id="view_btn"
-            className="btn btn-block"
+            className="btn btn-block ml-2"
         >
-            View Details
+            View
         </Link>
+
         </div>
     </div>
     </div>
 );
 };
 
-export default productsHome;
+export default ProductsHome;

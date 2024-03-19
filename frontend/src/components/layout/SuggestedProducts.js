@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 const SuggestedProducts = ( { product } ) => {
 return (
     <div className={`col-sm-6 col-md-4 col-lg-3 my-2`}>
-    <div className="card card-suggested p-3 rounded">
+    <div className="card card-suggested p-3">
         <Link to={`/product/${product._id}`}>
         <img
+            loading="lazy"
             className="card-img-left img-fluid"
             src={product.images[0].url}
             alt="logo"

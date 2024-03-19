@@ -1,12 +1,27 @@
+
+
 html,
 body {
-    font-family: 'Amazon Ember';
+    font-family: 'Montserrat';
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    /* background-color: #BBE1FA; */
 }
+
+@media (max-width: 490px) {
+    .responsive-img {
+      height: 200px;
+    }
+  }
+
+  .dark-mode {
+    /* Styles for dark mode */
+    background-color: black;
+    color: white;
+  }
 
 /* Scroll Bar */
 
@@ -27,7 +42,7 @@ body {
 }
 
 nav {
-    background-color: #232f3e;
+    background-color: #3282B8;
     padding: 1rem 1rem;
 }
 
@@ -42,7 +57,7 @@ nav {
 a:hover { cursor: pointer; }
 
 #search_btn {
-    background-color: #febd69;
+    background-color: #BBE1FA;
 }
 
 .input-group {
@@ -99,18 +114,25 @@ a:hover { cursor: pointer; }
     margin-top: 1.8rem;
 }
 
+#product_details_image {
+    border-radius: 20px;
+}
+
 .card {
     height: 100%;
+    border-radius: 20px;
+    /* background-color: #BBE1FA; */
 }
 
 .card-suggested {
     height: 100%;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .card-suggested h5:hover,
 .card-suggested h6:hover {
-    color: #fa9c23;
+    color: #3282B8;
     text-decoration: none;
 }
 
@@ -119,7 +141,7 @@ a:hover { cursor: pointer; }
 }
 
 .card-title a:hover {
-    color: #fa9c23;
+    color: #3282B8;
     text-decoration: none;
 }
 
@@ -135,6 +157,7 @@ a:hover { cursor: pointer; }
 #view_btn {
     background-color: #fa9c23;
     color: white;
+    border-radius: 15px;
 }
 
 
@@ -205,6 +228,21 @@ footer {
 
 .card-img-top {
     height: 150px;
+    border-radius: 15px;
+}
+
+.card-img-top-small {
+    height: 150px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+}
+
+.card-img-left {
+    height: 150px;
+    border-radius: 15px;
 }
 
 
@@ -304,16 +342,20 @@ footer {
     font-size: 1.4rem;
 }
 
+#view_btn {
+    background-color: #3282B8;
+}
+
 #checkout_btn,
 .review-btn {
-    background-color: #fa9c23;
+    background-color: #3282B8;
     border-color: #fa9c23;
     margin-top: 2rem;
     border-radius: 5rem;
 }
 
 #view_order_details {
-    background-color: #fa9c23;
+    background-color: #3282B8;
     border-color: #fa9c23;
 }
 

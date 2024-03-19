@@ -47,6 +47,7 @@ const ProductDetails = () => {
                   product.images.map((image) => (
                     <Carousel.Item key={image.public_id}>
                       <img
+                        id="product_details_image"
                         className="d-block w-100"
                         src={image.url}
                         alt={product.title}
@@ -89,13 +90,13 @@ const ProductDetails = () => {
                 <button
                   type="button"
                   id="cart_btn"
-                  className="btn btn-primary ml-4 mt-2 d-inline"
+                  className="btn btn-primary ml-sm-4 ml-md-4 ml-2 mt-2 d-inline"
                 >
                   Add to Cart
                 </button>
               </div>
 
-              <hr className="mt-0" />
+              <hr className="mt-3" />
 
               <p>
                 Status:{" "}
@@ -192,7 +193,7 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 container product-heading mb-3">
+          <div className="col-sm-12 col-md-6 col-lg-3 container product-heading mb-3">
             <h2>Related Products</h2>
           </div>
           <div className="row container">
@@ -207,5 +208,7 @@ const ProductDetails = () => {
     </Fragment>
   );
 };
+
+
 
 export default ProductDetails;
