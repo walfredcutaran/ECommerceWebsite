@@ -1,5 +1,3 @@
-
-
 html,
 body {
     font-family: 'Montserrat';
@@ -8,7 +6,19 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /* background-color: #BBE1FA; */
+}
+
+:root {
+    --background-color: #ffff;
+    --toggle-bg: #f0eb9d;
+}
+
+[data-theme="dark"] {
+    --background-color: #3282B8;
+}
+
+.App {
+    background-color: var(--background-color);
 }
 
 @media (max-width: 490px) {
@@ -17,11 +27,7 @@ body {
     }
   }
 
-  .dark-mode {
-    /* Styles for dark mode */
-    background-color: black;
-    color: white;
-  }
+
 
 /* Scroll Bar */
 
@@ -118,10 +124,19 @@ a:hover { cursor: pointer; }
     border-radius: 20px;
 }
 
+
 .card {
     height: 100%;
     border-radius: 20px;
+    box-shadow: inset 0 0 0 0 #BBE1FA;
+    transition: ease-out 0.3s;
     /* background-color: #BBE1FA; */
+}
+
+.card:hover {
+    /* box-shadow: inset 300px 0 0 0 #BBE1FA; */
+    background-color: #BBE1FA;
+    cursor: pointer;
 }
 
 .card-suggested {
@@ -138,6 +153,7 @@ a:hover { cursor: pointer; }
 
 .card-title a {
     color: #2e2e2e;
+    transition: ease-out 0.15s;
 }
 
 .card-title a:hover {
@@ -153,15 +169,6 @@ a:hover { cursor: pointer; }
 .card-text {
     font-size: 1.4rem;
 }
-
-#view_btn {
-    background-color: #fa9c23;
-    color: white;
-    border-radius: 15px;
-}
-
-
-
 
 .ratings {
     font-size: 1.2rem;
@@ -344,6 +351,12 @@ footer {
 
 #view_btn {
     background-color: #3282B8;
+    border-radius: 15px;
+    transition: ease-out 0.2s;
+}
+
+#view_btn:hover {
+    background-color: #0F4C75;
 }
 
 #checkout_btn,
@@ -569,16 +582,19 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #3282B8;
+    border-color: #BBE1FA;
+    
 }
 
 .page-link {
-    color: #fa9c23;
+    transition: ease-out 0.2s;
+    color: #3282B8;
 }
 
 .page-link:hover {
-    color: #fa9c23;
+    color: #3282B8;
+    background-color: #BBE1FA;
 }
 
 /* Admin Sidebar */

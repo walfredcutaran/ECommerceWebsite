@@ -64,7 +64,7 @@ const Home = () => {
           <h1 id="products_heading">Products</h1>
 
           <section id="products" className="container mt-5">
-            <div className="row">
+            <div className="row" data-theme="dark">
               {keyword ? (
                 <Fragment>
                   {/* <div className="col-6 col-md-3 mt-5 mb-5">
