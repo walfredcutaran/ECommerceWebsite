@@ -16,8 +16,8 @@ dotenv.config({path: 'backend/config/config.env'});
 // Connecting to database
 connectDatabase();
 
-const server = app.listen(process.env.PORT, () => {
-    console.log(`Server started on PORT: ${process.env.PORT} in ${process.env.NODE_ENV} mode.`);
+const server = app.listen(process.env.HOST, () => {
+    console.log(`Server started on PORT: ${process.env.HOST} in ${process.env.NODE_ENV} mode.`);
     console.log("This is for deployment branch.");
 }) 
 
