@@ -9,7 +9,6 @@ import Loader from "./layout/loadingAnimation";
 import { Link, useParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { useAlert } from 'react-alert';
 import { getProducts } from "../actions/productActions";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
@@ -34,7 +33,6 @@ const Home = () => {
     "Kitchen",
   ];
 
-  const alert = useAlert()  
   const dispatch = useDispatch();
 
   const { loading, products, error, productsCount, resPerPage } = useSelector(state => state.products);
@@ -45,10 +43,14 @@ const Home = () => {
 
     dispatch(getProducts(keyword, currentPage, price, category));
     
-  }, [dispatch, alert, error, keyword, currentPage, price, category]);
+  }, [dispatch, error, keyword, currentPage, price, category]);
 
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
+  }
+
+  if (products == null) {
+    return <Loader />
   }
 
   return (

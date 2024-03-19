@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAlert } from 'react-alert';
 
 const Search = () => {
   const [keyword, setKeyword] = useState('');
   const [showSearchBar, setShowSearchBar] = useState(true);
   const navigate = useNavigate();
-  const alert = useAlert();
 
   // console.log("DEBUG: ", showSearchBar);
 
@@ -17,9 +15,7 @@ const Search = () => {
       setShowSearchBar(true);
       navigate(`/search/${keyword}`);
 
-    } else {
-      alert.show("Please enter a keyword.");
-    }
+    } 
   };
 
   const debouncedSearch = (e) => {
