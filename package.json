@@ -23,10 +23,13 @@
     "nodemailer": "^6.9.9",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "validator": "^13.11.0",
 =======
 =======
 >>>>>>> parent of f58d3ca (no redux fix)
+=======
+>>>>>>> parent of b93f8a4 (deploy gcloud build working but cannot get / error)
     "react-alert": "^7.0.3",
     "validator": "^13.11.0"
   },
