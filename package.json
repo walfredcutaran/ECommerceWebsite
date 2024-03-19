@@ -22,12 +22,18 @@
     "mongoose": "^8.1.0",
     "nodemailer": "^6.9.9",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "validator": "^13.11.0",
 =======
+=======
+>>>>>>> parent of f58d3ca (no redux fix)
     "react-alert": "^7.0.3",
     "validator": "^13.11.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
+>>>>>>> parent of f58d3ca (no redux fix)
+=======
 >>>>>>> parent of f58d3ca (no redux fix)
     "nodemon": "^3.0.3"
   }
