@@ -63,7 +63,7 @@ nav {
 a:hover { cursor: pointer; }
 
 #search_btn {
-    background-color: #BBE1FA;
+    background-color: #febd69;
 }
 
 .input-group {
@@ -84,7 +84,6 @@ a:hover { cursor: pointer; }
     color: white;
     font-size: 20px;
     cursor: pointer;
-    
 }
 
 .modal {
@@ -350,13 +349,13 @@ footer {
 }
 
 #view_btn {
-    background-color: #3282B8;
+    background-color: #febd69;
     border-radius: 15px;
     transition: ease-out 0.2s;
 }
 
 #view_btn:hover {
-    background-color: #0F4C75;
+    background-color: #F86F03;
 }
 
 #checkout_btn,
