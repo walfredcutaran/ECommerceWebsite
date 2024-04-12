@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: 'Montserrat';
+    font-family: 'Amazon Ember';
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -77,13 +77,22 @@ a:hover { cursor: pointer; }
     font-size: large;
 }
 
-#login_btn,
+#login_btn {
+    
+}
 #view_btn {
     /* background-color: #febd69; */
     /* padding: 0.4rem 1.8rem; */
     color: white;
     font-size: 20px;
     cursor: pointer;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .modal {
@@ -123,13 +132,32 @@ a:hover { cursor: pointer; }
     border-radius: 20px;
 }
 
+/* #card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+.column {
+    
+}
 
 .card {
     height: 100%;
     border-radius: 20px;
     box-shadow: inset 0 0 0 0 #BBE1FA;
     transition: ease-out 0.3s;
+    position: relative;
+    display: flex;
+    width: 950px;
     /* background-color: #BBE1FA; */
+}
+
+.card-img-top {
+    height: 180px;
+    border-radius: 15px;
+    width: auto;
+    display: flex;
+    position: relative;
 }
 
 .card:hover {
@@ -150,9 +178,58 @@ a:hover { cursor: pointer; }
     text-decoration: none;
 }
 
+#product-price {
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+#product-price .currency {
+    font-size: 0.5em;
+    position: relative; 
+    margin-left: 10px;
+  }
+
+  #product-price .cents {
+    font-size: 0.5em;
+    position: relative;
+  }
+
+  #product-price span {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+  }
+
+  .shipping {
+    margin-left: 20px;
+    font-size: 1rem;
+
+  }
+  
+  .overall-rating {
+    margin-left: 10px;
+    font-size: 2rem;
+    width: 115px;
+    text-align: left;
+  }
+  
+  .smaller-case{
+    font-size: 0.5em;
+    position: relative; 
+    color: grey;
+  }
+
+
+
 .card-title a {
     color: #2e2e2e;
     transition: ease-out 0.15s;
+    display: flex;
+    position: relative;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    width: 500px;
 }
 
 .card-title a:hover {
@@ -163,6 +240,7 @@ a:hover { cursor: pointer; }
 
 .card-body {
     padding-left: 0;
+
 }
 
 .card-text {
@@ -232,10 +310,7 @@ footer {
     color: black;
 }
 
-.card-img-top {
-    height: 150px;
-    border-radius: 15px;
-}
+
 
 .card-img-top-small {
     height: 150px;

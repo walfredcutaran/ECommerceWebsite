@@ -64,7 +64,7 @@ const Home = () => {
           <h1 id="products_heading">Products</h1>
 
           <section id="products" className="container mt-5">
-            <div className="row" data-theme="dark">
+            <div className="column" data-theme="dark">
               {keyword ? (
                 <Fragment>
                   {/* <div className="col-6 col-md-3 mt-5 mb-5">
@@ -111,7 +111,7 @@ const Home = () => {
                   </div>
 
                   <div className="col-6 col-md-9">
-                    <div className="row">
+                    <div className="column">
                       {products.map((product) => (
                         <Products key={product._id} product={product} col={4} />
                       ))}
