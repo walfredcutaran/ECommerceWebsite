@@ -4,23 +4,29 @@ import { Link, useParams } from "react-router-dom";
 const ProductsHome = ({ product, col }) => {
 return (
 <div
-    className={`col-12 col-sm-6 col-md-6 col-lg-${col} my-3 `}
-    id="card-container"
+    className={`container col-lg-${col} mt-4`}
+    // className={`container col-12 col-sm-6 col-md-6 col-lg-${col} my-3`}
 >
     <Link to={`/product/${product._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-    <div className="card p-3">
+    <div class="container">
+    <div className="card p-3 ">
     
+    {/* change to flex-column on smaller viewports */}
     <div className="card-body d-flex flex-row">
         <Link to={`/product/${product._id}`}>
+        <div class="col">
         <img
             loading="lazy"
             id="product-img-home"
-            className="card-img-top mx-auto"
+            className="card-img-top"
             src={product.images[0].url}
             alt="logo"
+            height={"200px"}
         />
+        </div>
+
         </Link>
-        <div className="flex-column">
+        <div className="flex-column col-6">
         <h5 className="card-title">
             <Link to={`/product/${product._id}`}>{product.name}</Link>
         </h5>
@@ -40,7 +46,7 @@ return (
             </p>
         </div>
         </div>
-        <div className="ratings flex-column">
+        <div className="ratings flex-column col-2">
         {/* <div className="rating-outer">
     <div
         className="rating-inner"
@@ -66,6 +72,7 @@ return (
             View
         </Link>
         </div>
+    </div>
     </div>
     </div>
     {/* here */}</Link>

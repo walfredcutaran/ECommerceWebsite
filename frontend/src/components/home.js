@@ -64,7 +64,9 @@ const Home = () => {
           <h1 id="products_heading">Products</h1>
 
           <section id="products" className="container mt-5">
-            <div className="column" data-theme="dark">
+          {/* change this class below to row if viewport is smaller */}
+          {/* connected to parentdiv container in productsHome  */}
+            <div className="row" data-theme="dark" id="viewport-change">
               {keyword ? (
                 <Fragment>
                   {/* <div className="col-6 col-md-3 mt-5 mb-5">
