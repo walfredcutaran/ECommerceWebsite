@@ -6,6 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 :root {
@@ -221,14 +222,13 @@ a:hover { cursor: pointer; }
 
 
 
-.card-title a {
+.card-title {
     color: #2e2e2e;
     transition: ease-out 0.15s;
     display: flex;
     position: relative;
     margin-left: 20px;
-    font-size: 1.5rem;
-    width: 500px;
+    font-size: 1.4rem;
 }
 
 .card-title a:hover {

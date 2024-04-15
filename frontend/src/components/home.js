@@ -61,12 +61,12 @@ const Home = () => {
         <Fragment>
           <MetaData title={"High Quality Products Online"} />
 
-          <h1 id="products_heading">Products</h1>
+          <h1 id="products_heading"> Welcome </h1>
 
           <section id="products" className="container mt-5">
           {/* change this class below to row if viewport is smaller */}
           {/* connected to parentdiv container in productsHome  */}
-            <div className="row" data-theme="dark" id="viewport-change">
+            <div className="column" data-theme="dark" id="viewport-change">
               {keyword ? (
                 <Fragment>
                   {/* <div className="col-6 col-md-3 mt-5 mb-5">

@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 const ProductsHome = ({ product, col }) => {
 return (
 <div
-    className={`container col-lg-${col} mt-4`}
+    className={` col-lg-${col} mt-4`}
     // className={`container col-12 col-sm-6 col-md-6 col-lg-${col} my-3`}
 >
     <Link to={`/product/${product._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -28,7 +28,7 @@ return (
         </Link>
         <div className="flex-column col-6">
         <h5 className="card-title">
-            <Link to={`/product/${product._id}`}>{product.name}</Link>
+            {product.name}
         </h5>
         <p className="card-text mt-2" id="product-price">
             <span className="currency">$</span> {product.price.toFixed(0)}{" "}
